@@ -48,13 +48,13 @@ nav ul li {
 
 nav {
 	font-family: 'Lato', sans-serif;
-    background-color: #ddd;
+    background-color: #efe;
     text-align: center;
     font-size: 1em;
     height: 70px;
 }
 
-nav ul li.scroll-to-target a {
+nav ul li a {
 	color: #666;
 	text-decoration: none;
 	outline: 0;
@@ -64,7 +64,7 @@ nav ul li.scroll-to-target a {
 	
 }
 
-nav ul li.scroll-to-target a:hover, #myName a:hover{
+nav ul li a:hover, #myName a:hover{
 	color: #fff;
 }
 
@@ -89,9 +89,13 @@ table, th, td {
 h3 {
     text-decoration: 
 }
-#head div.l-containers  {
-	height: auto;
+.firstdiv{
 	padding: 70px 0 0 2%;
+}
+#aboutme div.containers  {
+	clear:both;
+    background-color: #eee;
+	height: auto;
 	
 }
 .subheader {
@@ -106,16 +110,36 @@ h3 {
 }
 
 .left {
-	width: 48%;
 	float: left;
-    border-right: 1px solid #ddd;
 }
 .right {
-	padding-left: 2%;
-	width: 49%;
 	float: left;
-    border-left: 1px solid #ddd;
 }
+/* */
+.clearfix:after { 
+	content: ""; 
+	display: block; 
+	clear: both;
+}
+
+/* works */
+
+#works div.containers  {
+	clear:both;
+    background-color: #eef;
+	height: auto;
+	padding: 70px 0 0 2%;
+	
+}
+
+#contact div.containers  {
+	clear:both;
+    background-color: #fef;
+	height: auto;
+	padding: 70px 0 0 2%;
+	
+}
+
 
 
 @media only screen and (min-width: 641px) and (max-width: 880px) {
