@@ -1,0 +1,250 @@
+/*peeling*/
+
+#peel {
+	position: relative;
+}
+#peel img, #peel .peelBody {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	right: 0;
+	top: 70px;
+}
+#peel img {
+	z-index: 10;
+}
+#peel .peelBody {
+	overflow: hidden;
+	background: url(me.jpg) no-repeat right top;
+}
+.hvr-bounce-to-right:before {
+	background:#bbf;
+}
+
+ul li a {
+	color: #666;
+	text-decoration: none;
+	outline: 0;
+	vertical-align: middle;
+}
+
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    float: none;
+    color: #000;
+    font-size: 12pt;
+}
+
+body {
+	min-width: 320px;
+}
+
+body, a {
+	font: 16px/1.5 'Lato', sans-serif;
+	color: #949494;
+	font-size: 100%;
+}
+
+
+.body{
+	background-color: #efe;
+
+}
+
+@media only screen and (min-width: 1000px) {
+	.body,#peel{
+		padding-left: 15%;
+		padding-right: 10%;
+	}
+	div.bottom
+	{
+		height: 90px;
+	}
+}
+@media only screen and (min-width: 750px) and (max-width: 999px) {
+	.body,#peel{
+		padding-left: 12%;
+		padding-right: 9%;
+	}
+	div.bottom
+	{
+		height: 80px;
+	}
+}
+@media only screen and (min-width: 550px) and (max-width: 749px) {
+	.body,#peel{
+		padding-left: 9%;
+		padding-right: 6%;
+	}
+	div.bottom
+	{
+		height: 70px;
+	}
+}
+
+header {
+	z-index: 1000;
+	position: fixed;
+	width: 100%;
+	height: 75px;
+    margin:auto;
+    display: block;
+    max-width: auto;
+    min-width: 400px;
+}
+
+/*	header bar */
+#myName a {
+	height: 120%;
+	font-size: 200%;
+	color: #555;
+	font-weight:bolder;
+	margin-top: -13px;
+}
+
+nav ul {
+    margin: 0 auto;
+    padding: 24px 0 0 0;
+    list-style-type: none;
+}
+
+ul {
+    margin: auto;
+    list-style-type: none;
+}
+
+ul li {
+    display: inline-block;
+    padding: 0 4%;
+    margin: auto;
+}
+
+nav {
+	font-family: 'Lato', sans-serif;
+    background-color: #efe;
+    text-align: center;
+    font-size: 1em;
+    height: 70px;
+	max-width: auto;
+}
+
+nav ul li a {
+	color: #666;
+	text-decoration: none;
+	outline: 0;
+	display: inline-block;
+	height: 28px;
+	vertical-align: middle;
+	
+}
+
+nav ul li a:hover, #myName a:hover{
+	color: #000;
+}
+
+
+/* cv */
+h3 {
+    text-decoration: 
+}
+.firstdiv{
+	padding: 70px 0 0 2%;
+}
+#aboutme div.containers  {
+	clear:both;
+    background-color: #eee;
+	height: auto;
+	
+}
+.subheader {
+	padding-left:5%;
+	color: #777;
+	font-size: 1.3em;
+}
+.content {
+	padding-left:10%;
+	color: #888;
+	font-size: 1em;
+}
+
+.half {
+	float: left;
+}
+/* fix floating member */
+.clearfix:after { 
+	content: ""; 
+	display: block; 
+	clear: both;
+}
+
+/* middle */
+
+#middle div.containers  {
+	clear:both;
+    background-color: #eef;
+	height: auto;
+	padding: 2% 2% 2% 2%;
+	
+	background: -webkit-linear-gradient(#eef,#ddf);
+	background: -o-linear-gradient(#eef,#def);
+	background: -moz-linear-gradient(#eef,#ddf);
+	background: linear-gradient(#eef,#ddf);
+}
+
+#contact div.containers  {
+	clear:both;
+    background-color: #def;
+	height: auto;
+	padding: 1% 0 1% 0;
+}
+
+nav.contact {
+    background-color: #def;
+}
+
+
+
+@media only screen and (min-width: 641px) and (max-width: 950px) {
+
+    ul li {
+        padding: 0 2%;
+    }
+}
+@media only screen and (min-width: 580px) and (max-width: 640px) {
+
+    ul li {
+        padding: 0 1.5%;
+    }
+}
+
+@media only screen and (max-width: 579px) {
+
+    ul li {
+        padding: 0 0.5%;
+    }
+}
+
+
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
