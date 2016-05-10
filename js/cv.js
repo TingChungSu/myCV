@@ -21,8 +21,8 @@ $(document).ready(function($) {
 	}, function(){	
 		// when mouse leave, stop acting animation and recovery pic in 200ms
 		$("a img, a .peelBody", this).stop().animate({
-				width: 50,
-				height: 50
+				width: 100,
+				height: 100
 			}, 200);
 		timer = setTimeout(fish, 2000);
 	});
@@ -31,9 +31,9 @@ $(document).ready(function($) {
 	function fish(){
 		// check mouse cover or not
 		var width = $("#peel a img").width();
-		if(width > 50)
+		if(width > 150)
 			return;
-		width = width > 0 ? 0 : 50;
+		width = width > 0 ? 0 : 150;
 
 		$("#peel a img, #peel a .peelBody").animate({
 			width: width,
