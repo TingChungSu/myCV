@@ -1,47 +1,35 @@
-$(document).ready(function($) {
-	/* scroll animation */
-	$("a.scroll-to-target").click(function() {
-		var url = $(this).attr("href");
-		var target = $(url);
-		$('html,body').animate({
-			scrollTop: target.offset().top}, 500
-		);
-		return false;
-	});   
-	
-	
-	/* peel animation */   
-	$("#peel").hover(function(){
-		// when mouse cover, stop acting animation and enlarge pic in 500ms
-		$("a img, a .peelBody", this).stop().animate({
-				width: 500,
-				height: 500
-			}, 500);
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
 
-	}, function(){	
-		// when mouse leave, stop acting animation and recovery pic in 200ms
-		$("a img, a .peelBody", this).stop().animate({
-				width: 100,
-				height: 100
-			}, 200);
-		timer = setTimeout(fish, 2000);
-	});
+    burger.addEventListener('click', () => {
+        // Toggle Nav
+        nav.classList.toggle('nav-active');
 
-	var speed = 1000;
-	function fish(){
-		// check mouse cover or not
-		var width = $("#peel a img").width();
-		if(width > 150)
-			return;
-		width = width > 0 ? 0 : 150;
+        // Animate Links
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+            }
+        });
 
-		$("#peel a img, #peel a .peelBody").animate({
-			width: width,
-			height: width
-		}, 700);
-		timer = setTimeout(fish, speed);
-	}
+        // Burger Animation
+        burger.classList.toggle('toggle');
+    });
+}
 
-	timer = setTimeout(fish, 2000);
-	
+navSlide();
+
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
