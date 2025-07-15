@@ -33,3 +33,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Language switching
+const langBtn = document.getElementById('lang-btn');
+let currentLang = 'en';
+
+langBtn.addEventListener('click', () => {
+    if (currentLang === 'en') {
+        currentLang = 'zh';
+        langBtn.textContent = 'English';
+    } else {
+        currentLang = 'en';
+        langBtn.textContent = '中文';
+    }
+
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        if (el.dataset.lang === currentLang) {
+            el.style.display = 'block';
+        } else {
+            el.style.display = 'none';
+        }
+    });
+});

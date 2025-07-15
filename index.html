@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ting Chung Su - CV</title>
-    <meta name="keywords" content="蘇鼎鈞, Ting Chung Su, NCTU, NCTU CS, NCTUCS, CV, Resume">
-    <meta name="author" content="Ting Chung Su">
+    <title>Ting Chun Su - CV</title>
+    <meta name="keywords" content="Ting Chun Su, 蘇鼎鈞, CTO, AIGym, Software Engineer, CV, Resume">
+    <meta name="author" content="Ting Chun Su">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/cv.css">
 </head>
@@ -13,15 +13,18 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="#about">Ting Chung Su</a>
+                <a href="#about">Ting Chun Su</a>
             </div>
             <ul class="nav-links">
-                <li><a href="#work-experience">Work Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#leadership">Leadership</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#work-experience" data-lang="en">Work Experience</a><a href="#work-experience" data-lang="zh" style="display:none;">工作經歷</a></li>
+                <li><a href="#education" data-lang="en">Education</a><a href="#education" data-lang="zh" style="display:none;">教育背景</a></li>
+                <li><a href="#skills" data-lang="en">Skills</a><a href="#skills" data-lang="zh" style="display:none;">技能</a></li>
+                <li><a href="#certifications" data-lang="en">Certifications</a><a href="#certifications" data-lang="zh" style="display:none;">資格認證</a></li>
+                <li><a href="#contact" data-lang="en">Contact</a><a href="#contact" data-lang="zh" style="display:none;">聯絡我</a></li>
             </ul>
+            <div class="lang-switch">
+                <button id="lang-btn">中文</button>
+            </div>
             <div class="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -35,12 +38,13 @@
             <div class="container">
                 <div class="about-content">
                     <div class="about-text">
-                        <h1>Ting Chung Su</h1>
-                        <h2>Software Engineer</h2>
-                        <p>A passionate and experienced software engineer with a strong background in web development and a love for creating intuitive and efficient user experiences.</p>
+                        <h1 data-lang="en">Ting Chun Su</h1>
+                        <h1 data-lang="zh" style="display:none;">蘇鼎鈞</h1>
+                        <h2 data-lang="en">CTO - AIGym Sports Tech</h2>
+                        <h2 data-lang="zh" style="display:none;">技術長 - AIGym 運動科技</h2>
                     </div>
                     <div class="about-image">
-                        <img src="css/me.jpg" alt="Ting Chung Su">
+                        <img src="css/me.jpg" alt="Ting Chun Su">
                     </div>
                 </div>
             </div>
@@ -48,26 +52,56 @@
 
         <section id="work-experience" class="data-section">
             <div class="container">
-                <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+                <h2 data-lang="en"><i class="fas fa-briefcase"></i> Work Experience</h2>
+                <h2 data-lang="zh" style="display:none;"><i class="fas fa-briefcase"></i> 工作經歷</h2>
                 <article>
-                    <h3>Executive Yuan</h3>
-                    <p class="sub-header">IT Department / Substitute Military Service</p>
-                    <p class="date">Oct. 2015 - Sep. 2016</p>
+                    <h3 data-lang="en">Chief Technology Officer</h3>
+                    <h3 data-lang="zh" style="display:none;">技術長</h3>
+                    <p class="sub-header">AIGym technology</p>
+                    <p class="date" data-lang="en">Dec 2019 - Present</p>
+                    <p class="date" data-lang="zh" style="display:none;">2019年12月 - 至今</p>
                 </article>
                 <article>
-                    <h3>Syntec Technology Co.</h3>
-                    <p class="sub-header">IT Department / Summer Intern</p>
-                    <p class="date">Jul. 2014 - Sep. 2014</p>
+                    <h3 data-lang="en">Programmer</h3>
+                    <h3 data-lang="zh" style="display:none;">程式設計師</h3>
+                    <p class="sub-header">ESound Tech</p>
+                    <p class="date" data-lang="en">Oct 2016 - Present</p>
+                    <p class="date" data-lang="zh" style="display:none;">2016年10月 - 至今</p>
+                </article>
+                <article>
+                    <h3 data-lang="en">Substitute Military Service</h3>
+                    <h3 data-lang="zh" style="display:none;">替代役</h3>
+                    <p class="sub-header" data-lang="en">Executive Yuan</p>
+                    <p class="sub-header" data-lang="zh" style="display:none;">行政院資訊處</p>
+                    <p class="date" data-lang="en">Oct 2015 - Sep 2016</p>
+                    <p class="date" data-lang="zh" style="display:none;">2015年10月 - 2016年9月</p>
+                </article>
+                <article>
+                    <h3 data-lang="en">IT Intern</h3>
+                    <h3 data-lang="zh" style="display:none;">IT 實習生</h3>
+                    <p class="sub-header" data-lang="en">Syntec Technology Co.</p>
+                    <p class="sub-header" data-lang="zh" style="display:none;">新代科技</p>
+                    <p class="date" data-lang="en">Jul 2014 - Sep 2014</p>
+                    <p class="date" data-lang="zh" style="display:none;">2014年7月 - 2014年9月</p>
                 </article>
             </div>
         </section>
 
         <section id="education" class="data-section">
             <div class="container">
-                <h2><i class="fas fa-user-graduate"></i> Education</h2>
+                <h2 data-lang="en"><i class="fas fa-user-graduate"></i> Education</h2>
+                <h2 data-lang="zh" style="display:none;"><i class="fas fa-user-graduate"></i> 教育背景</h2>
                 <article>
-                    <h3>National Chiao Tung University (NCTU)</h3>
-                    <p class="sub-header">B.S. in Computer Science</p>
+                    <h3 data-lang="en">National Taiwan University</h3>
+                    <h3 data-lang="zh" style="display:none;">國立臺灣大學</h3>
+                    <p class="sub-header" data-lang="en">Master's degree, Computer science</p>
+                    <p class="sub-header" data-lang="zh" style="display:none;">碩士, 資訊工程</p>
+                </article>
+                <article>
+                    <h3 data-lang="en">National Chiao Tung University</h3>
+                    <h3 data-lang="zh" style="display:none;">國立交通大學</h3>
+                    <p class="sub-header" data-lang="en">Bachelor's degree, Computer science</p>
+                    <p class="sub-header" data-lang="zh" style="display:none;">學士, 資訊工程學系</p>
                     <p class="date">2011 - 2015</p>
                 </article>
             </div>
@@ -75,14 +109,16 @@
 
         <section id="skills" class="data-section">
             <div class="container">
-                <h2><i class="fas fa-cogs"></i> Skills</h2>
+                <h2 data-lang="en"><i class="fas fa-cogs"></i> Skills</h2>
+                <h2 data-lang="zh" style="display:none;"><i class="fas fa-cogs"></i> 技能</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>Languages</h3>
+                        <h3 data-lang="en">Languages</h3>
+                        <h3 data-lang="zh" style="display:none;">程式語言</h3>
                         <ul>
-                            <li>C/C++</li>
                             <li>Java</li>
                             <li>JavaScript</li>
+                            <li>C/C++</li>
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>PHP</li>
@@ -90,68 +126,34 @@
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h3>Frameworks & Libraries</h3>
+                        <h3 data-lang="en">Others</h3>
+                        <h3 data-lang="zh" style="display:none;">其他</h3>
                         <ul>
-                            <li>Node.js</li>
-                            <li>React</li>
-                            <li>Vue.js</li>
-                            <li>jQuery</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Systems</h3>
-                        <ul>
-                            <li>Linux/Unix</li>
-                            <li>Windows</li>
+                            <li data-lang="en">Information Security</li>
+                            <li data-lang="zh" style="display:none;">資訊安全</li>
+                            <li data-lang="en">Sports Science</li>
+                            <li data-lang="zh" style="display:none;">運動科學</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="data-section">
+        <section id="certifications" class="data-section">
             <div class="container">
-                <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+                <h2 data-lang="en"><i class="fas fa-certificate"></i> Certifications</h2>
+                <h2 data-lang="zh" style="display:none;"><i class="fas fa-certificate"></i> 資格認證</h2>
                 <article>
-                    <h3>Taiwan Dental Association</h3>
-                    <p class="sub-header">Android app / Developer</p>
-                    <p class="date">Mar. 2015 - Apr. 2015</p>
+                    <h3>Certified Cybersecurity Technician</h3>
+                    <p class="sub-header">EC-Council</p>
+                    <p class="date" data-lang="en">Issued Sep 2023 · Expires Sep 2026</p>
+                    <p class="date" data-lang="zh" style="display:none;">發照日期 2023年9月 · 2026年9月 過期</p>
                 </article>
                 <article>
-                    <h3>Syntec Technology Co.</h3>
-                    <p class="sub-header">Android app / Developer</p>
-                    <p class="date">Jul. 2014 - Sep. 2014</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="leadership" class="data-section">
-            <div class="container">
-                <h2><i class="fas fa-users"></i> Leadership & Camp Experiences</h2>
-                <article>
-                    <h3>NCTU CHENGGONG JINGMEI Alumni Society</h3>
-                    <p class="sub-header">Director</p>
-                    <p class="date">Jul. 2013 - Jun. 2014</p>
-                </article>
-                <article>
-                    <h3>NCTU CHENGGONG JINGMEI Alumni Society</h3>
-                    <p class="sub-header">Leader of Financial Section</p>
-                    <p class="date">Jul. 2012 - Jun. 2013</p>
-                </article>
-                 <article>
-                    <h3>2015 NCTU CS Camp</h3>
-                    <p class="sub-header">Training Section / Taught Programming</p>
-                    <p class="date">Jul. 2015</p>
-                </article>
-                <article>
-                    <h3>NCTU FIRE</h3>
-                    <p class="sub-header">Core Member</p>
-                    <p class="date">Oct. 2011 - Mar. 2012</p>
-                </article>
-                <article>
-                    <h3>2012 NCTU CS Welcome Camp</h3>
-                    <p class="sub-header">Activities Section / Designed and Hosted Events</p>
-                    <p class="date">Oct. 2012</p>
+                    <h3>International Certified Personal Trainer</h3>
+                    <p class="sub-header">National Academy of Sports Medicine (NASM)</p>
+                    <p class="date" data-lang="en">Issued Sep 2023 · Expires Sep 2025</p>
+                    <p class="date" data-lang="zh" style="display:none;">發照日期 2023年9月 · 2025年9月 過期</p>
                 </article>
             </div>
         </section>
@@ -159,12 +161,13 @@
 
     <footer id="contact">
         <div class="container">
-            <h2>Contact Me</h2>
+            <h2 data-lang="en">Contact Me</h2>
+            <h2 data-lang="zh" style="display:none;">聯絡我</h2>
             <ul class="contact-links">
                 <li><a href="mailto:tingchungsu@gmail.com" target="_blank"><i class="fas fa-envelope"></i> tingchungsu@gmail.com</a></li>
                 <li><a href="https://fb.com/DanielSu.Taiwan" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
                 <li><a href="https://github.com/tingchungsu" target="_blank"><i class="fab fa-github"></i> Github</a></li>
-                <li><a href="https://www.linkedin.com/in/%E9%BC%8E%E9%88%9E-%E8%98%87-1051b011a" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="http://www.linkedin.com/in/ting-chun-su" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
             </ul>
         </div>
     </footer>
